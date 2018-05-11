@@ -1,9 +1,12 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.23;
 
 // ----------------------------------------------------------------------------
-// Want to say something?
+// Want to say something? Use this contract to send some random text from the
+// Gnosis multisig wallet or equivalent
 //
-// Use this to send some random text from the Gnosis multisig wallet
+// Deployed to 0xc0dd00590Ad0Fbffe2f567651D075ea48435Dc89
+//
+// https://github.com/bokkypoobah/RandomSmartContracts/blob/master/contracts/SayIt.sol
 //
 // Enjoy. (c) BokkyPooBah / Bok Consulting Pty Ltd 2018. The MIT Licence.
 // ----------------------------------------------------------------------------
@@ -22,7 +25,7 @@ contract Owned {
     address public newOwner;
     event OwnershipTransferred(address indexed from, address indexed to);
 
-    function Owned() public {
+    constructor() public {
         owner = msg.sender;
     }
 
